@@ -1,0 +1,27 @@
+.button{
+    background-color: rgb(69, 43, 48);
+    padding: 10px;
+    
+}
+
+.item{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10%;
+    border: 1px solid blue;
+    border-radius: 4px;
+    padding: 5%;
+    margin-bottom: 20px;
+}
+
+.data{
+    display:block;
+    list-style: none;
+}
+
+.card{
+    background-color: rgb(202, 218, 108);
+    border-radius: 6px;
+    color: #000;
+}
