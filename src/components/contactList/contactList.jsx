@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchContacts } from '../../redux/contactSlice';
+import { fetchContacts } from '../../redux/auth/slice';
 import { selectNameFilter } from '../../redux/filterSlice';
-import Contact from '../contact/Contact';
+import Contact from '../Contact/Contact';
 
 export default function ContactList() {
   const dispatch = useDispatch();
