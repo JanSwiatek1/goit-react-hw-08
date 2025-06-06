@@ -6,7 +6,7 @@ import { selectContacts, selectIsLoading } from '../../redux/contacts/selectors'
 import Contact from '../Contact/Contact';
 import css from './ContactList.module.css';
 
-export default function ContactList() {
+export function ContactList() {
   const dispatch = useDispatch();
   const contacts = useSelector(selectContacts);
   const isLoading = useSelector(selectIsLoading);
