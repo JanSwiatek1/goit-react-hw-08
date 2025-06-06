@@ -1,13 +1,13 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchContacts } from '../../redux/auth/slice';
-import { selectNameFilter } from '../../redux/filterSlice';
+import { fetchContacts } from '../../redux/contacts/operations';
+import { selectNameFilter } from '../../redux/filtersSlice';
 import Contact from '../Contact/Contact';
 
 export default function ContactList() {
   const dispatch = useDispatch();
   const { items, loading, error } = useSelector((state) => state.contacts);
-  const filter = useSelector(selectNameFilter);
+  const filter = useSelector(selectNameFilter) || '';
 
   useEffect(() => {
     dispatch(fetchContacts());
