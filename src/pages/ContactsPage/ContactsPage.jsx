@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import ContactForm from '../../components/ContactForm';
-import {ContactList} from '../../components/ContactList/ContactList';
+import ContactForm from '../../components/ContactForm/ContactForm';  // Dodaj folder i rozszerzenie
+import ContactList from '../../components/ContactList/ContactList'; // Usunąłem nawiasy klamrowe
 import SearchBox from '../../components/SearchBox/SearchBox';
-import { fetchContacts } from '../../redux/contacts/contactsOperations';
+import { fetchContacts } from '../../redux/contacts/operations';    // Sprawdź ścieżkę do operations
 
 export default function ContactsPage() {
   const dispatch = useDispatch();
