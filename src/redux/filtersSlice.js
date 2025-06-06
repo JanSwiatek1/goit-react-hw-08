@@ -1,24 +1,19 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  name: '', // przechowuje wartość filtra wyszukiwania
+  name: ''
 };
 
-const filterSlice = createSlice({
-  name: 'filters', // nazwa slice'a
+const filtersSlice = createSlice({
+  name: 'filters',
   initialState,
   reducers: {
-    // Akcja do zmiany wartości filtra
     changeFilter(state, action) {
-      state.name = action.payload; // aktualizuje wartość filtra
-    }
-  }
+      state.name = action.payload;
+    },
+  },
 });
 
-// Eksport akcji i reducera
-export const { changeFilter } = filterSlice.actions;
-export default filterSlice.reducer;
-
-// Selektory
-export const selectNameFilter = (state) => state.filters?.name || '';
-// Dodajemy operator opcjonalnego łańcucha (?.) i wartość domyślną
+export const { changeFilter } = filtersSlice.actions;
+export const selectNameFilter = (state) => state.filters.name;
+export default filtersSlice.reducer;
