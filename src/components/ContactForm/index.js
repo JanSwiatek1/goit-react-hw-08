@@ -1,2 +1,2 @@
-// export { default } from './ContactForm.jsx';
+export { default } from './ContactForm.jsx';
 // console.log("index");
