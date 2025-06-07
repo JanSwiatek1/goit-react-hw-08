@@ -1,3 +1,2 @@
-export { default } from './ContactForm';
-import ContactForm from "../../components/ContactForm";
+export { default } from './ContactForm.jsx';
 console.log("index");
