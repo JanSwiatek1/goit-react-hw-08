@@ -33,3 +33,5 @@ export function ContactList() {
     </ul>
   );
 }
+
+export default ContactList; 
