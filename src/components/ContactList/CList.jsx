@@ -4,7 +4,7 @@ import { fetchContacts, deleteContact } from '../../redux/contacts/operations';
 import { selectNameFilter } from '../../redux/filtersSlice';
 import { selectContacts, selectIsLoading } from '../../redux/contacts/selectors';
 import Contact from '../Contact/Cont';
-import css from './ContactList.module.css';
+// import css from './ContactList.module.css';
 
 export default function ContactList() {
   const dispatch = useDispatch();
@@ -24,9 +24,9 @@ export default function ContactList() {
   if (!contacts.length) return <p>Your phonebook is empty. Add first contact!</p>;
 
   return (
-    <ul className={css.list}>
+    <ul>
       {filteredContacts.map(contact => (
-        <li key={contact.id} className={css.item}>
+        <li key={contact.id}>
           <Contact contact={contact} onDelete={() => dispatch(deleteContact(contact.id))} />
         </li>
       ))}
