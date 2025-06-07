@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchContacts, deleteContact } from '../../redux/contacts/operations';
+import { fetchContacts} from '../../redux/contacts/operations';
 import { selectNameFilter } from '../../redux/filtersSlice';
 import { selectContacts, selectIsLoading } from '../../redux/contacts/selectors';
-import Contact from '../Contact/Contact';
+// import Contact from '../Contact/Contact';
 import css from './ContactList.module.css';
 
 export default function ContactList() {
@@ -27,7 +27,7 @@ export default function ContactList() {
     <ul className={css.list}>
       {filteredContacts.map(contact => (
         <li key={contact.id} className={css.item}>
-          <Contact contact={contact} onDelete={() => dispatch(deleteContact(contact.id))} />
+          {/* <Contact contact={contact} onDelete={() => dispatch(deleteContact(contact.id))} /> */}
         </li>
       ))}
     </ul>
