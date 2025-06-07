@@ -2,7 +2,7 @@ import { useDispatch } from 'react-redux';
 import { changeFilter } from '../../redux/filtersSlice';
 
 
-function SearchBox() {
+export default function SearchBox() {
   const dispatch = useDispatch();
 
   return (
@@ -16,4 +16,4 @@ function SearchBox() {
   );
 }
 
-export default SearchBox;
+// export default SearchBox;
