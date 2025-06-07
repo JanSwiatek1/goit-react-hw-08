@@ -16,7 +16,7 @@ const ContactSchema = Yup.object().shape({
     .required('Required'),
 });
 
-export function ContactForm() {
+function ContactForm() {
   const dispatch = useDispatch();
   const contacts = useSelector(selectContacts);
 
