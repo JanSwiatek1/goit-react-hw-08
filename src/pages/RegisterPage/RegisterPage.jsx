@@ -5,8 +5,12 @@ import { register } from '../../redux/auth/authOperations';
 export default function RegisterPage() {
   const dispatch = useDispatch();
 
-  const handleSubmit = (credentials) => {
-    dispatch(register(credentials));
+  const handleSubmit = (values) => {
+    dispatch(register({
+      name: values.name,
+      email: values.email,
+      password: values.password
+    }));
   };
 
   return (
